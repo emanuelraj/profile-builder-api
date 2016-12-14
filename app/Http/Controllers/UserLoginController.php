@@ -17,7 +17,7 @@ class UserLoginController extends Controller
     public function authenticate()
     {
 		
-        if (Auth::attempt(['email' => Input::get('email'), 'password' => Input::get('password')])) {
+        if (Auth::attempt(['email' => Input::get('username'), 'password' => Input::get('password')])) {
             // Authentication passed...
             return "true";
         } else {
